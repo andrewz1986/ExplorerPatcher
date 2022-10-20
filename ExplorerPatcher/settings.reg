@@ -6,29 +6,29 @@
 
 ;T Taskbar
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;z 2 Taskbar style *
-;x 0 Windows 11 (default)
+;z 2 Styl Hlavního panelu *
+;x 0 Windows 11 (výchozí)
 ;x 1 Windows 10
 "OldTaskbar"=dword:00000001
-;y More taskbar options in the Settings app 🡕                                                            
+;y Více možností Hlavního panelu v systémovém Nastavení 🡕                                                            
 ;ms-settings:taskbar
-;y Customize notification area icons 🡕
+;y Přizpůsobit ikony v oznamovací oblasti 🡕
 ;shell:::{05d7b0f4-2121-4eff-bf6b-ed3f69b894d9}
-;y Customize system icons in the notification area 🡕
+;y Přizpůsobit systémové ikony v oznamovací oblasti 🡕
 ;shell:::{05d7b0f4-2121-4eff-bf6b-ed3f69b894d9}\SystemIcons
 ;s Taskbar_LocationSection !(IsWindows11Version22H2OrHigher&&!IsOldTaskbar)
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 4 Primary taskbar location on screen *
-;x 3 Bottom (default)
-;x 1 Top
-;x 0 Left
-;x 2 Right
+;c 4 Umístění primárního Hlavního panelu na obrazovce *
+;x 3 Vespod (výchozí)
+;x 1 Nahoře
+;x 0 Vlevo
+;x 2 Vpravo
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_TaskbarPosition"=dword:00000003
-;c 4 Secondary taskbar(s) location on screen
-;x 3 Bottom (default)
-;x 1 Top
-;x 0 Left
-;x 2 Right
+;c 4 Umístění sekundárních Hlavních panelů na obrazovce
+;x 3 Vespod (výchozí)
+;x 1 Nahoře
+;x 0 Vlevo
+;x 2 Vpravo
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_MMTaskbarPosition"=dword:00000003
 ;g Taskbar_LocationSection
 ;s Taskbar_CortanaButtonSection !IsWindows11Version22H2OrHigher
@@ -40,86 +40,86 @@
 "TaskbarDa"=dword:00000000
 ;g Taskbar_CortanaButtonSection
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
-;b Show Search button
+;b Zobrazit tlačítko Hledat
 "SearchboxTaskbarMode"=dword:00000001
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-;b Show Task view button
+;b Zobrazit tlačítko Zobrazení úkolů
 "ShowTaskViewButton"=dword:00000001
 ;s Taskbar_CortanaButtonSection1 IsWindows11Version22H2OrHigher
 ;s Taskbar_CortanaButtonSection2 !IsOldTaskbar
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-;b Show Widgets button
+;b Zobrazit tlačítko Widgetů
 "TaskbarDa"=dword:00000001
 ;g Taskbar_CortanaButtonSection2
 ;g Taskbar_CortanaButtonSection1
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Automatically hide the taskbar
+;b Automaticky skrývat Hlavní panel
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_AutoHideTaskbar"=dword:00000000
 ;s Taskbar_Windows10Section IsOldTaskbar
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 2 Start button style *
-;x 0 Windows 10 (default)
+;c 2 Styl tlačítka Start *
+;x 0 Windows 10 (výchozí)
 ;x 1 Windows 11
 "OrbStyle"=dword:00000000
-;c 5 Primary taskbar alignment
-;x 0 At screen edge (default)
-;x 1 Centered
-;x 5 Centered, at screen edge when full
-;x 3 Centered with Start button
-;x 7 Centered with Start button, at screen edge when full
+;c 5 Zarovnání primárního Hlavního panelu
+;x 0 V kraji obrazovky (výchozí)
+;x 1 Uprostřed
+;x 5 Uprostřed, nakraji při zaplnění
+;x 3 Uprostřed s tlačítkem Start
+;x 7 Uprostřed s tlačítkem Start, nakraji při zaplnění
 "OldTaskbarAl"=dword:00000000
-;c 5 Secondary taskbar(s) alignment
-;x 0 At screen edge (default)
-;x 1 Centered
-;x 5 Centered, at screen edge when full
-;x 3 Centered with Start button
-;x 7 Centered with Start button, at screen edge when full
+;c 5 Zarovnání sekundárních Hlavních panelů
+;x 0 V kraji obrazovky (výchozí)
+;x 1 Uprostřed
+;x 5 Uprostřed, nakraji při zaplnění
+;x 3 Uprostřed s tlačítkem Start
+;x 7 Uprostřed s tlačítkem Start, nakraji při zaplnění
 "MMOldTaskbarAl"=dword:00000000
-;c 3 Combine taskbar icons on primary taskbar
-;x 0 Always combine
-;x 1 Combine when taskbar is full
-;x 2 Never combine (default)
+;c 3 Slučovat ikony na primárním Hlavním panelu
+;x 0 Vždy
+;x 1 Jen při zaplnění Hlavního panelu
+;x 2 Nikdy (výchozí)
 "TaskbarGlomLevel"=dword:00000002
-;c 3 Combine taskbar icons on secondary taskbar(s)
-;x 0 Always combine
-;x 1 Combine when taskbar is full
-;x 2 Never combine (default)
+3 Slučovat ikony na sekundárním Hlavním panelu
+;x 0 Vždy
+;x 1 Jen při zaplnění Hlavního panelu
+;x 2 Nikdy (výchozí)
 "MMTaskbarGlomLevel"=dword:00000002
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-;c 2 Taskbar icon size
-;x 1 Small
-;x 0 Large (default)
+;c 2 Velikost ikon Hlavního panelu
+;x 1 Malá
+;x 0 Velká (výchozí)
 "TaskbarSmallIcons"=dword:00000000
 ;e 
 ;e 
 ;g Taskbar_Windows10Section
 
 
-;T System tray
+;T Systémová oblast
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Skin taskbar and tray pop-up menus
+;b Převlékat menu Hlavního panelu a systémové oblasti
 "SkinMenus"=dword:00000001
-;b Center tray icon pop-up menus
+;b Vystředit systémové ikony vyskakovacích menu
 "CenterMenus"=dword:00000001
-;b Flyout behavior for tray icon pop-up menus
+;b Chování při přejetí ikon menu vyskakovacích menu
 "FlyoutMenus"=dword:00000001
 [HKEY_CURRENT_USER\Software\Microsoft\TabletTip\1.7]
-;b Show touch keyboard button *
+;b Zobrazit ikonu dotykové klávesnice *
 "TipbandDesiredVisibility"=dword:00000000
 ;s SystemTray_Section98 IsOldTaskbar
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-;b Show seconds in the clock
+;b V hodinách zobrazovat sekundy
 "ShowSecondsInSystemClock"=dword:00000000
 ;g SystemTray_Section98
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;i Control Center button *
+;i Ikona Řídícího centra *
 "HideControlCenterButton"=dword:00000000
 ;s SystemTray_Section109 IsOldTaskbar
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-;c 3 Show desktop button
-;x 1 Enabled (default)
-;x 0 Disabled
-;x 2 Hidden
+;c 3 Tlačítko Plochy
+;x 1 Povolené (výchozí)
+;x 0 Zakázáné
+;x 2 Neviditelné
 "TaskbarSD"=dword:00000001
 ;g SystemTray_Section109
 ;s SystemTray_Section117 !IsOldTaskbar
@@ -133,100 +133,100 @@
 ;b Apply Windows 11 style to system tray icons *
 "SkinIcons"=dword:00000001
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;a Choosing 'Open Network && Internet settings' when right clicking the
-;c 3 network icon should open:
-;x 0 Network section in the Settings app (default)
-;x 1 Network and Sharing Center in Control Panel
-;x 2 Network Connections in Control Panel
+;a 'Otevřít nastavení síť a internet' po kliknutím pravým tlačítkem
+;c 3 na ikonu sítě má otevřít:
+;x 0 Sekci Síť v Nastavení (výchozí)
+;x 1 Centrum síťových připojení a sdílení v Ovládacích panelech
+;x 2 Síťová připojení v Ovládacích panelech
 "ReplaceNetwork"=dword:00000000
 ;q
-;t When clicking a system icon in the system tray, open:
+;t Kliknutí na ikonu v systémové oblasti otevře v případě:
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Control Panel\Settings\Network]
-;c 7 Network
-;x 6 Control Center
-;x 5 Windows 11 WiFi flyout
-;x 0 Windows 10 flyout (default)
-;x 2 Windows 8 flyout
-;x 1 Network section in the Settings app
-;x 3 Network and Sharing Center in Control Panel
-;x 4 Network Connections in Control Panel
+;c 7 Sítě
+;x 6 Řídící centrum
+;x 5 Windows 11 WiFi panel
+;x 0 Windows 10 panel (výchozí)
+;x 2 Windows 8 panel
+;x 1 Sekci Síť v Nastavení
+;x 3 Centrum síťových připojení a sdílení v Ovládacích panelech
+;x 4 Síťová připojení v Ovládacích panelech
 "ReplaceVan"=dword:00000000
 [HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\MTCUVC]
-;c 2 Sound
-;x 1 Windows 10 flyout (default)
-;x 0 Windows 7 flyout
+;c 2 Zvuku
+;x 1 Windows 10 panel (výchozí)
+;x 0 Windows 7 panel
 "EnableMtcUvc"=dword:00000001
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ImmersiveShell]
-;c 3 Clock
-;x 2 Windows 11 flyout
-;x 0 Windows 10 flyout (default)
-;x 1 Windows 7
+;c 3 Hodin
+;x 2 Windows 11 panel
+;x 0 Windows 10 panel (výchozí)
+;x 1 Windows 7 panel
 "UseWin32TrayClockExperience"=dword:00000000
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ImmersiveShell]
-;c 2 Battery
-;x 0 Windows 10 flyout (default)
-;x 1 Windows 7
+;c 2 Baterie
+;x 0 Windows 10 panel (výchozí)
+;x 1 Windows 7 panel
 "UseWin32BatteryFlyout"=dword:00000000
 ;s SystemTray_LanguageSwitcherBefore22H2 !IsWindows11Version22H2OrHigher
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 3 Language switcher *
-;x 0 Windows 11 (default)
-;x 1 Windows 10 (with link to "Language Preferences")
-;x 4 Windows 10
+;c 3 Rozložení klávesnice *
+;x 0 Windows 11 panel (výchozí)
+;x 1 Windows 10 panel (s odkazem "Jazykové preference")
+;x 4 Windows 10 panel
 "IMEStyle"=dword:00000000
 ;g SystemTray_LanguageSwitcherBefore22H2
 ;s SystemTray_LanguageSwitcherAfter22H2 IsWindows11Version22H2OrHigher
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;c 4 Language switcher *
-;x 0 Windows 11 (default)
-;x 7 Windows 10
-;x 1 Windows 10 (with link to "Language Preferences") (no animation)
-;x 4 Windows 10 (no animation)
+;x 0 Windows 11 panel(výchozí)
+;x 7 Windows 10 panel
+;x 1 Windows 10 panel (s odkazem "Jazykové preference")
+;x 4 Windows 10 panel (bez animace)
 "IMEStyle"=dword:00000000
 ;g SystemTray_LanguageSwitcherAfter22H2
 ;g SystemTray_Windows10Section
 
 
 
-;T File Explorer
-;e For the settings marked with (**) to work in Open or Save file dialogs as well, register
-;e this utility as shell extension using the option below.
-;y Learn more 🡕
+;T Průzkumník souborů
+;e Aby nastavení označená pomocí (**) fungovala v dialozích Otevřít nebo Uložit, zaregistrujte tuto utilitu
+;e jako rozšíření pomocí volby níže.
+;y Dozvědět se více 🡕
 ;https://github.com/valinet/ExplorerPatcher/wiki/Using-ExplorerPatcher-as-shell-extension
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;q
-;b Register as shell extension
+;b Zaregistrovat jako rozšíření
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_RegisterAsShellExtension"=dword:00000000
 [-HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
-;d Disable the Windows 11 context menu *
+;d Vypnout ochuzená kontextová menu Windows 11 *
 @=""
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Always use legacy file transfer dialog
+;b Vždy používat starší dialog přenosu souborů
 "LegacyFileTransferDialog"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Use classic drive groupings in This PC
+;b Použít klasické seskupování jednotek v Tomto počítači
 "UseClassicDriveGrouping"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 3 Control Interface *
-;x 0 Windows 11 Command Bar (default)
-;x 1 Windows 10 Ribbon
-;x 2 Windows 7 Command Bar
+;c 3 Ovládací rozhraní *
+;x 0 Windows 11 příkazový panel (výchozí)
+;x 1 Windows 10 pás karet
+;x 2 Windows 7 příkazový panel
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_FileExplorerCommandUI"=dword:00000000
-;t The following settings take effect on newly created File Explorer windows:
+;t Následující se uplatní pouze u nově otevřených oken Průzkumníka
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;i Use immersive menus when displaying Windows 10 context menus **
 "DisableImmersiveContextMenu"=dword:00000000
 [-HKEY_CURRENT_USER\Software\Classes\CLSID\{056440FD-8568-48e7-A632-72157243B55B}\InprocServer32]
-;d Disable navigation bar **
+;d Skrýt Navigační podokno **
 @=""
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Disable modern search bar
+;b Skrýt moderní pole vyhledávání
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_DisableModernSearchBar"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Shrink address bar height **
+;b Scvrknutý adresní řádek **
 "ShrinkExplorerAddressBar"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Hide search bar completely **
+;b Zcela skrýt adresní řádek **
 "HideExplorerSearchBar"=dword:00000000
 ;s Explorer_TitlebarSection !IsWindows11Version22H2OrHigher
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
@@ -246,28 +246,28 @@
 
 
 
-;T Start menu
+;T Nabídka Start
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-;z 2 Start menu style
-;x 0 Windows 11 (default)
+;z 2 Styl nabídky Start
+;x 0 Windows 11 (výchozí)
 ;x 1 Windows 10
 "Start_ShowClassicMode"=dword:00000000
-;y More Start menu options in the Settings app 🡕
+;y Více možností nabídky Start v systémovém Nastavení 🡕
 ;ms-settings:personalization-start
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-;c 2 Position on screen
-;x 0 At screen edge
-;x 1 Center (default)
+;c 2 Pozice na obrazovce
+;x 0 Na okraji
+;x 1 Uprostřed (výchozí)
 "TaskbarAl"=dword:00000001
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 22 Maximum number of frequent apps to show
-;x 0 None
+;c 22 Maximální počet zobrazených často používaných aplikací
+;x 0 Žádná
 ;x 1 1
 ;x 2 2
 ;x 3 3
 ;x 4 4
 ;x 5 5
-;x 6 6 (default)
+;x 6 6 (výchozí)
 ;x 7 7
 ;x 8 8
 ;x 9 9
@@ -282,51 +282,51 @@
 ;x 18 18
 ;x 19 19
 ;x 20 20
-;x 99999 Unlimited
+;x 99999 Neomezeno
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_Start_MaximumFrequentApps"=dword:00000006
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\StartPage]
 ;a When using multiple displays, open Start on this monitor when invoked using
 ;c 10 the keyboard
-;x 1 Primary monitor (default)
-;x 0 Monitor on which the cursor is on
-;x 2 Monitor #2
-;x 3 Monitor #3
-;x 4 Monitor #4
-;x 5 Monitor #5
-;x 6 Monitor #6
-;x 7 Monitor #7
-;x 8 Monitor #8
-;x 9 Monitor #9
+;x 1 Primární displej (výchozí)
+;x 0 Displej kde je kurzor
+;x 2 Displej #2
+;x 3 Displej #3
+;x 4 Displej #4
+;x 5 Displej #5
+;x 6 Displej #6
+;x 7 Displej #7
+;x 8 Displej #8
+;x 9 Displej #9
 "MonitorOverride"=dword:00000001
 ;s StartMenu_Windows11 !IsWindows10StartMenu
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Disable the "Recommended" section
+;b Vypnout sekci "Doporučené"
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_StartDocked_DisableRecommendedSection"=dword:00000000
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\StartPage]
-;b Open Start in All apps by default
+;b Ve výchozím stavu otevřít Start se zobrazenými Všemi aplikacemi 
 "MakeAllAppsDefault"=dword:00000000
 ;g StartMenu_Windows11
 ;s StartMenu_Windows10 IsWindows10StartMenu
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Show more tiles
+;b Zobrazit více dlaždic
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_StartUI_ShowMoreTiles"=dword:00000000
-;c 3 Corner preference
-;x 1 Rounded corners, floating menu
-;x 2 Rounded corners, docked menu
-;x 0 Not rounded
+;c 3 Rohy
+;x 1 Zaoblené, vznášející se nabídka
+;x 2 Zaoblené, zadokovaná nabídka
+;x 0 Nezaoblené
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_StartUI_EnableRoundedCorners"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 3 Display mode
-;x 0 Default
-;x 1 Start menu
-;x 2 Full screen Start
+;c 3 Režim zobrazení
+;x 0 Výchozí
+;x 1 Nabídka Start
+;x 2 Obrazovka Start
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_ForceStartSize"=dword:00000000
-;c 3 App list
-;x 0 Display
-;x 3 Hide
-;x 1 Disable 
+;c 3 Seznam aplikací
+;x 0 Zobrazit
+;x 3 Skrýt
+;x 1 Vypnout 
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_NoStartMenuMorePrograms"=dword:00000000
-;u Pin tiles to Windows 10 Start menu from File Explorer
+;u Připnout z Průzkumníka dlaždice do Windows 10 nabídky Start 
 ;pin_tiles
 ;g StartMenu_Windows10
 
