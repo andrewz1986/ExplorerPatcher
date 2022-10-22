@@ -332,37 +332,37 @@
 
 
 
-;T Window switcher
+;T Přepínač oken
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
-;z 4 Window switcher (Alt+Tab) style *
+;z 4 Styl přepínače oken (Alt+Tab) *
 ;x 0 Windows 11 (default)
 ;x 3 Windows 10
 ;x 1 Windows NT
-;x 2 Simple Window Switcher
+;x 2 Jednoduchý přepínač oken
 "AltTabSettings"=dword:00000000
 ;s WindowSwitcher_SWS IsSWSEnabled
 [HKEY_CURRENT_USER\Software\ExplorerPatcher\sws]
-;b Include desktop
+;b Zahrnout Plochu
 "IncludeWallpaper"=dword:00000001
-;b Always show on primary monitor
+;b Vždy zobrazit na primární monitoru
 "PrimaryOnly"=dword:00000000
-;b Show windows only from current monitor
+;b Zobrazit okna jen z používaného monitoru
 "PerMonitor"=dword:00000000
 ;b Display only the most recent window (per application switcher)
 "SwitcherIsPerApplication"=dword:00000000
 ;b %PLACEHOLDER_0001%
 "NoPerApplicationList"=dword:00000000
-;c 3 Theme
-;x 0 Default
+;c 3 Téma
+;x 0 Výchozí
 ;x 1 Acrylic
-;x 2 Mica (always opaque)
+;x 2 Mica (vždy neprůhledné)
 "Theme"=dword:00000000
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MultitaskingView\AltTabViewHost]
-;c 19 Opacity
-;x 100 Opaque
+;c 19 Nerůhlednost
+;x 100 Neprůhledné
 ;x 98 98 %
 ;x 96 96 %
-;x 95 95 % (default)
+;x 95 95 % (výchozí)
 ;x 94 94 %
 ;x 92 92 %
 ;x 90 90 %
@@ -380,83 +380,83 @@
 ;x 30 30 %
 "Grid_backgroundPercent"=dword:0000005F
 [HKEY_CURRENT_USER\Software\ExplorerPatcher\sws]
-;c 3 Color scheme
-;x 0 Follow system setting (default)
-;x 1 Light
-;x 2 Dark
+;c 3 Barevné schéma
+;x 0 Sladit se systémovým nastavením (výchozí)
+;x 1 Světlé
+;x 2 Tmavé
 "ColorScheme"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher\sws]
-;c 3 Corner preference
-;x 2 Rounded (default)
-;x 3 Small rounded
-;x 1 Not rounded
+;c 3 Zaoblení
+;x 2 Zaoblené (výchozí)
+;x 3 Málo zaoblené
+;x 1 Nezaoblené
 "CornerPreference"=dword:00000002
 [HKEY_CURRENT_USER\Software\ExplorerPatcher\sws]
-;c 20 Row height
-;x 330 330 pt
-;x 320 320 pt
-;x 310 310 pt
-;x 300 300 pt
-;x 290 290 pt
-;x 280 280 pt
-;x 270 270 pt
-;x 260 260 pt
-;x 250 250 pt
-;x 240 240 pt
-;x 230 230 pt (default)
-;x 220 220 pt
-;x 210 210 pt
-;x 200 200 pt
-;x 190 190 pt
-;x 180 180 pt
-;x 170 170 pt
-;x 160 160 pt
-;x 150 150 pt
-;x 140 140 pt
+;c 20 Výška řádku
+;x 330 330 bodů
+;x 320 320 bodů
+;x 310 310 bodů
+;x 300 300 bodů
+;x 290 290 bodů
+;x 280 280 bodů
+;x 270 270 bodů
+;x 260 260 bodů
+;x 250 250 bodů
+;x 240 240 bodů
+;x 230 230 bodů (výchozí)
+;x 220 220 bodů
+;x 210 210 bodů
+;x 200 200 bodů
+;x 190 190 bodů
+;x 180 180 bodů
+;x 170 170 bodů
+;x 160 160 bodů
+;x 150 150 bodů
+;x 140 140 bodů
 "RowHeight"=dword:000000e6
-;c 10 Maximum width (percentage of screen width)
-;x 100 100 % (not recommended)
+;c 10 Maximální šířka (procento šířky obrazovky)
+;x 100 100 % (nedoporučeno)
 ;x 95 95 %
 ;x 90 90 %
 ;x 85 85 %
-;x 80 80 % (default)
+;x 80 80 % (výchozí)
 ;x 75 75 %
 ;x 70 70 %
 ;x 65 65 %
 ;x 60 60 %
 ;x 55 55 %
 "MaxWidth"=dword:00000050
-;c 10 Maximum height (percentage of screen height)
-;x 100 100 % (not recommended)
+;c 10 Maximální výška (procento výšky obrazovky)
+;x 100 100 % (nedoporučeno)
 ;x 95 95 %
 ;x 90 90 %
 ;x 85 85 %
-;x 80 80 % (default)
+;x 80 80 % (výchozí)
 ;x 75 75 %
 ;x 70 70 %
 ;x 65 65 %
 ;x 60 60 %
 ;x 55 55 %
 "MaxHeight"=dword:00000050
-;c 11 Window padding
-;x 50 50 pt
-;x 45 45 pt
-;x 40 40 pt
-;x 35 30 pt
-;x 30 30 pt
-;x 25 25 pt
-;x 20 20 pt (default)
-;x 15 15 pt
-;x 10 10 pt
-;x 5 5 pt
-;x 0 None
+;c 11 Obtékání oken
+;x 50 50 bodů
+;x 45 45 bodů
+;x 40 40 bodů
+;x 35 30 bodů
+;x 30 30 bodů
+;x 25 25 bodů
+;x 20 20 bodů (výchozí)
+;x 15 15 bodů
+;x 10 10 bodů
+;x 5 5 bodů
+;x 0 Žádné
 "MasterPadding"=dword:00000014
-;c 11 Show delay
-;x 0 None
+;c 11 Zpoždění zobraneí
+;x 0 Žádné
 ;x 25 25 ms
 ;x 50 50 ms
 ;x 75 75 ms
-;x 100 100 ms (default)
+;x 100 100 ms (výchozí)
 ;x 125 125 ms
 ;x 150 150 ms
 ;x 200 200 ms
@@ -464,13 +464,13 @@
 ;x 400 400 ms
 ;x 500 500 ms
 "ShowDelay"=dword:00000064
-;c 3 Use the scroll wheel to change selection
-;x 0 Never (default)
-;x 1 When cursor is over the switcher
-;x 2 Always
+;c 3 Použít kolečko myši pro změnu výběru
+;x 0 Nikdy (výchozí)
+;x 1 Když je kurzor místěný v přepínači
+;x 2 Vždy
 "ScrollWheelBehavior"=dword:00000000
 ;q
-;y Learn more about Simple Window Switcher 🡕
+;y Dozvědět se více o Jednoduchém přepínači oken 🡕
 ;https://github.com/valinet/ExplorerPatcher/wiki/Simple-Window-Switcher
 ;g WindowSwitcher_SWS
 
@@ -622,84 +622,84 @@
 
 
 
-;T Other
+;T Ostatní
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Remember last used section in this window
+;b Pamatovat si naposledy použitou sekci v tomto okně
 "LastSectionInProperties"=dword:00000000
-;b Open clock flyout when pressing Win+C instead of Microsoft Teams *
+;b Při stisku Win+C zobrazovat panel hodin místo Microsoft Teams  *
 "ClockFlyoutOnWinC"=dword:00000000
-;b Show separators between taskbar toolbars *
+;b Zobrazovat oddělovače mezi panely Hlavního panelu *
 "ToolbarSeparators"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;b Add shortcut to program settings in Win+X menu
 "PropertiesInWinX"=dword:00000000
 ;b Remove shortcut key from program settings item in Win+X menu
 "NoMenuAccelerator"=dword:00000000
-;b Disable Office hotkeys (Ctrl+Alt+Shift+Windows key combinations) *
+;b Deaktivovat klávesové zkratky Officu (Ctrl+Alt+Shift+Windows key combinations) *
 "DisableOfficeHotkeys"=dword:00000000
-;b Disable Win+F (Feedback Hub) hotkey *
+;b Deaktivovat klávesovou zkratku Win+F (Feedback Hub) *
 "DisableWinFHotkey"=dword:00000000
-;b Disable rounded corners for application windows
+;b Deaktivovat zaoblení rohů oken aplikací
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_DisableRoundedCorners"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Disable quadrants when snapping windows *
+;b Deaktivovat kvadranty při připínání oken *
 "DisableAeroSnapQuadrants"=dword:00000000
 ;s Other_SnapAssistStyle !IsWindows11Version22H2OrHigher
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 2 Snap Assist style
-;x 0 Windows 11 (default)
+;c 2 Styl připínání oken
+;x 0 Windows 11 (výchozí)
 ;x 3 Windows 10
 "SnapAssistSettings"=dword:00000000
 ;g Other_SnapAssistStyle
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-;c 6 Default action in the Alt+F4 dialog on the desktop
-;x 256 Switch user
-;x 1 Sign out
-;x 16 Sleep
-;x 64 Hibernate
-;x 2 Shut down (default)
-;x 4 Restart
+;c 6 Výchozí akce v dialogu vyvolatelném při stisku Alt+F4 na ploše
+;x 256 Přepnout uživatele
+;x 1 Odhlásit se
+;x 16 Režim spánku
+;x 64 Hibernace
+;x 2 Vypnout (výchozí)
+;x 4 Restartovat
 "Start_PowerButtonAction"=dword:00000002
-;t Prevent the following Control Panel links from being redirected to the Settings app:
+;t Předcházet tomu, aby se tyto odkazy Ovládacího panelu otevíraly v Nastavení:
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b System / About page
+;b Systém
 "DoNotRedirectSystemToSettingsApp"=dword:00000000
-;b Programs and Features
+;b Programy a funkce
 "DoNotRedirectProgramsAndFeaturesToSettingsApp"=dword:00000000
-;b Adjust date/time
+;b Datum a čas
 "DoNotRedirectDateAndTimeToSettingsApp"=dword:00000000
-;b Customize notification icons
+;b Přizpůsobit ikony upozornění
 "DoNotRedirectNotificationIconsToSettingsApp"=dword:00000000
 
 
 
-;T Updates
+;T Aktualizace
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;z 3 When File Explorer starts
-;x 1 Notify about available updates (default)
-;x 0 Prompt to install available updates
-;x 2 Do not check for updates
+;z 3 Při spuštění Průzkumníka souborů
+;x 1 Upozornit na nové aktualizace (výchozí)
+;x 0 Zeptat se na instalaci dostupných aktualizací
+;x 2 Nekontrolovat aktualizace
 "UpdatePolicy"=dword:00000001
-;b Receive pre-release versions, if available (not recommended)
+;b Získávat nehotové verze, pokud jsou dostupné  (nedoporučeno)
 "UpdatePreferStaging"=dword:00000000
-;b Suggest the latest version on the server, even if it's older (not recommended)
+;b Navrhnout nejaktuálnější verzi na serveru, i když je starší (nedoporučeno)
 "UpdateAllowDowngrades"=dword:00000000
-;t Update servers:
-;w Releases
+;t Aktualizační servery:
+;w Verze
 ;Type a URL that serves resources adhering to GitHub's releases API. To learn how to configure your own update server, please consult the wiki.
 ;github.com/valinet/ExplorerPatcher/releases/latest
 "UpdateURL"=""
-;w Pre-releases
+;w Nehotové verze
 ;Type a URL that serves resources adhering to GitHub's pre-releases API. To learn how to configure your own update server, please consult the wiki.
 ;api.github.com/repos/valinet/ExplorerPatcher/releases?per_page=1
 "UpdateURLStaging"=""
-;y Check for updates
+;y Zkontrolovat aktualizace
 ;;;EP_CHECK_FOR_UPDATES
-;y Update program and restart File Explorer
+;y Aktualizovat a restartovat Průzkumníka souborů
 ;;;EP_INSTALL_UPDATES
-;y Read about changes in the latest releases 🡕
+;y Prohlédnout si změny v posledních verzích 🡕
 ;https://github.com/valinet/ExplorerPatcher/blob/master/CHANGELOG.md
-;y Learn more 🡕
+;y Dozvědět se více 🡕
 ;https://github.com/valinet/ExplorerPatcher/wiki/Configure-updates
 
 
