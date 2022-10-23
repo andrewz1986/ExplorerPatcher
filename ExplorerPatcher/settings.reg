@@ -124,7 +124,7 @@
 ;g SystemTray_Section109
 ;s SystemTray_Section117 !IsOldTaskbar
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-;b Show desktop button
+;b Zobrazit tlačítko plochy
 "TaskbarSD"=dword:00000001
 ;g SystemTray_Section117
 ;s SystemTray_Windows10Section IsOldTaskbar
@@ -171,16 +171,16 @@
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;c 3 Rozložení klávesnice *
 ;x 0 Windows 11 panel (výchozí)
-;x 1 Windows 10 panel (s odkazem "Jazykové preference")
+;x 1 Windows 10 panel (s odkazem "Další nastavení klávesnice")
 ;x 4 Windows 10 panel
 "IMEStyle"=dword:00000000
 ;g SystemTray_LanguageSwitcherBefore22H2
 ;s SystemTray_LanguageSwitcherAfter22H2 IsWindows11Version22H2OrHigher
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 4 Language switcher *
+;c 4 Rozložení klávesnice *
 ;x 0 Windows 11 panel(výchozí)
 ;x 7 Windows 10 panel
-;x 1 Windows 10 panel (s odkazem "Jazykové preference")
+;x 1 Windows 10 panel (s odkazem "Další nastavení klávesnice")
 ;x 4 Windows 10 panel (bez animace)
 "IMEStyle"=dword:00000000
 ;g SystemTray_LanguageSwitcherAfter22H2
