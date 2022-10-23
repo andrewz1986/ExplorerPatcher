@@ -1,12 +1,12 @@
 ﻿Windows Registry Editor Version 5.00
 
 
-;M Settings
+;M Nastavení
 ;q
 
-;T Taskbar
+;T Hlavní panel
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;z 2 Styl Hlavního panelu *
+;z 2 Motiv Hlavního panelu *
 ;x 0 Windows 11 (výchozí)
 ;x 1 Windows 10
 "OldTaskbar"=dword:00000001
@@ -19,13 +19,13 @@
 ;s Taskbar_LocationSection !(IsWindows11Version22H2OrHigher&&!IsOldTaskbar)
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;c 4 Umístění primárního Hlavního panelu na obrazovce *
-;x 3 Vespod (výchozí)
+;x 3 Dole (výchozí)
 ;x 1 Nahoře
 ;x 0 Vlevo
 ;x 2 Vpravo
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_TaskbarPosition"=dword:00000003
 ;c 4 Umístění sekundárních Hlavních panelů na obrazovce
-;x 3 Vespod (výchozí)
+;x 3 Dole (výchozí)
 ;x 1 Nahoře
 ;x 0 Vlevo
 ;x 2 Vpravo
@@ -57,33 +57,33 @@
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_AutoHideTaskbar"=dword:00000000
 ;s Taskbar_Windows10Section IsOldTaskbar
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 2 Styl tlačítka Start *
+;c 2 Motiv tlačítka Start *
 ;x 0 Windows 10 (výchozí)
 ;x 1 Windows 11
 "OrbStyle"=dword:00000000
 ;c 5 Zarovnání primárního Hlavního panelu
 ;x 0 V kraji obrazovky (výchozí)
 ;x 1 Uprostřed
-;x 5 Uprostřed, nakraji při zaplnění
+;x 5 Uprostřed, na kraji při zaplnění
 ;x 3 Uprostřed s tlačítkem Start
-;x 7 Uprostřed s tlačítkem Start, nakraji při zaplnění
+;x 7 Uprostřed s tlačítkem Start, na kraji při zaplnění
 "OldTaskbarAl"=dword:00000000
 ;c 5 Zarovnání sekundárních Hlavních panelů
 ;x 0 V kraji obrazovky (výchozí)
 ;x 1 Uprostřed
-;x 5 Uprostřed, nakraji při zaplnění
+;x 5 Uprostřed, na kraji při zaplnění
 ;x 3 Uprostřed s tlačítkem Start
-;x 7 Uprostřed s tlačítkem Start, nakraji při zaplnění
+;x 7 Uprostřed s tlačítkem Start, na kraji při zaplnění
 "MMOldTaskbarAl"=dword:00000000
-;c 3 Slučovat ikony na primárním Hlavním panelu
-;x 0 Vždy
-;x 1 Jen při zaplnění Hlavního panelu
-;x 2 Nikdy (výchozí)
+;c 3 Slučování ikon na primárním Hlavním panelu
+;x 0 Vždy slučovat
+;x 1 Slučovat jen při zaplnění Hlavního panelu
+;x 2 Nikdy neslučovat (výchozí)
 "TaskbarGlomLevel"=dword:00000002
-3 Slučovat ikony na sekundárním Hlavním panelu
-;x 0 Vždy
-;x 1 Jen při zaplnění Hlavního panelu
-;x 2 Nikdy (výchozí)
+3 Slučování ikon na sekundárním Hlavním panelu
+;x 0 Vždy slučovat
+;x 1 Slučovat jen při zaplnění Hlavního panelu
+;x 2 Nikdy neslučovat (výchozí)
 "MMTaskbarGlomLevel"=dword:00000002
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 ;c 2 Velikost ikon Hlavního panelu
@@ -97,11 +97,11 @@
 
 ;T Systémová oblast
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Převlékat menu Hlavního panelu a systémové oblasti
+;b Skinovat menu Hlavního panelu a systémové oblasti
 "SkinMenus"=dword:00000001
-;b Vystředit systémové ikony vyskakovacích menu
+;b Vystředit vyskakovací menu ikon v systémové oblasti
 "CenterMenus"=dword:00000001
-;b Chování při přejetí ikon menu vyskakovacích menu
+;b Chování při přejetí vyskakovacích menu ikon v systémové oblasti
 "FlyoutMenus"=dword:00000001
 [HKEY_CURRENT_USER\Software\Microsoft\TabletTip\1.7]
 ;b Zobrazit ikonu dotykové klávesnice *
@@ -117,59 +117,59 @@
 ;s SystemTray_Section109 IsOldTaskbar
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 ;c 3 Tlačítko Plochy
-;x 1 Povolené (výchozí)
-;x 0 Zakázáné
-;x 2 Neviditelné
+;x 1 Povolit (výchozí)
+;x 0 Zakázat
+;x 2 Zneviditelnit
 "TaskbarSD"=dword:00000001
 ;g SystemTray_Section109
 ;s SystemTray_Section117 !IsOldTaskbar
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-;b Zobrazit tlačítko plochy
+;b Tlačítko Plochy
 "TaskbarSD"=dword:00000001
 ;g SystemTray_Section117
 ;s SystemTray_Windows10Section IsOldTaskbar
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;p 2
-;b Apply Windows 11 style to system tray icons *
+;b Použít na ikony systémové oblasti motiv Windows 11 *
 "SkinIcons"=dword:00000001
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;a 'Otevřít nastavení síť a internet' po kliknutím pravým tlačítkem
+;a Zvolení „Nastavení sítě a internetu“ po kliknutí pravým tlačítkem
 ;c 3 na ikonu sítě má otevřít:
-;x 0 Sekci Síť v Nastavení (výchozí)
-;x 1 Centrum síťových připojení a sdílení v Ovládacích panelech
-;x 2 Síťová připojení v Ovládacích panelech
+;x 0 Sekci „Síť“ v Nastavení (výchozí)
+;x 1 „Centrum síťových připojení a sdílení“ v Ovládacích panelech
+;x 2 „Síťová připojení“ v Ovládacích panelech
 "ReplaceNetwork"=dword:00000000
 ;q
-;t Kliknutí na ikonu v systémové oblasti otevře v případě:
+;t Kliknutí na systémovou ikonu v systémové oblasti otevře v případě...
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Control Panel\Settings\Network]
-;c 7 Sítě
+;c 7 sítě
 ;x 6 Řídící centrum
-;x 5 Windows 11 WiFi panel
+;x 5 Windows 11 Wi-Fi panel
 ;x 0 Windows 10 panel (výchozí)
 ;x 2 Windows 8 panel
-;x 1 Sekci Síť v Nastavení
-;x 3 Centrum síťových připojení a sdílení v Ovládacích panelech
-;x 4 Síťová připojení v Ovládacích panelech
+;x 1 Sekci „Síť“ v Nastavení
+;x 3 „Centrum síťových připojení a sdílení“ v Ovládacích panelech
+;x 4 „Síťová připojení“ v Ovládacích panelech
 "ReplaceVan"=dword:00000000
 [HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\MTCUVC]
-;c 2 Zvuku
+;c 2 zvuku
 ;x 1 Windows 10 panel (výchozí)
 ;x 0 Windows 7 panel
 "EnableMtcUvc"=dword:00000001
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ImmersiveShell]
-;c 3 Hodin
+;c 3 hodin
 ;x 2 Windows 11 panel
 ;x 0 Windows 10 panel (výchozí)
 ;x 1 Windows 7 panel
 "UseWin32TrayClockExperience"=dword:00000000
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ImmersiveShell]
-;c 2 Baterie
+;c 2 baterie
 ;x 0 Windows 10 panel (výchozí)
 ;x 1 Windows 7 panel
 "UseWin32BatteryFlyout"=dword:00000000
 ;s SystemTray_LanguageSwitcherBefore22H2 !IsWindows11Version22H2OrHigher
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 3 Rozložení klávesnice *
+;c 3 rozložení klávesnice *
 ;x 0 Windows 11 panel (výchozí)
 ;x 1 Windows 10 panel (s odkazem "Další nastavení klávesnice")
 ;x 4 Windows 10 panel
@@ -177,7 +177,7 @@
 ;g SystemTray_LanguageSwitcherBefore22H2
 ;s SystemTray_LanguageSwitcherAfter22H2 IsWindows11Version22H2OrHigher
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 4 Rozložení klávesnice *
+;c 4 rozložení klávesnice *
 ;x 0 Windows 11 panel(výchozí)
 ;x 7 Windows 10 panel
 ;x 1 Windows 10 panel (s odkazem "Další nastavení klávesnice")
@@ -189,7 +189,7 @@
 
 
 ;T Průzkumník souborů
-;e Aby nastavení označená pomocí (**) fungovala v dialozích Otevřít nebo Uložit, zaregistrujte tuto utilitu
+;e Aby nastavení označená pomocí (**) fungovala i v dialozích Otevřít nebo Uložit, zaregistrujte tuto utilitu
 ;e jako rozšíření pomocí volby níže.
 ;y Dozvědět se více 🡕
 ;https://github.com/valinet/ExplorerPatcher/wiki/Using-ExplorerPatcher-as-shell-extension
@@ -198,7 +198,7 @@
 ;b Zaregistrovat jako rozšíření
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_RegisterAsShellExtension"=dword:00000000
 [-HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
-;d Vypnout ochuzená kontextová menu Windows 11 *
+;d Zakázat ochuzená kontextová menu Windows 11 *
 @=""
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;b Vždy používat starší dialog přenosu souborů
@@ -208,11 +208,11 @@
 "UseClassicDriveGrouping"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;c 3 Ovládací rozhraní *
-;x 0 Windows 11 příkazový panel (výchozí)
-;x 1 Windows 10 pás karet
-;x 2 Windows 7 příkazový panel
+;x 0 Příkazový panel Windows 11 (výchozí)
+;x 1 Pás karet Windows 10
+;x 2 Příkazový panel Windows 7
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_FileExplorerCommandUI"=dword:00000000
-;t Následující se uplatní pouze u nově otevřených oken Průzkumníka
+;t Následující se uplatní pouze u nově otevřených oken Průzkumníka souborů
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;i Use immersive menus when displaying Windows 10 context menus **
 "DisableImmersiveContextMenu"=dword:00000000
@@ -226,21 +226,21 @@
 ;b Scvrknutý adresní řádek **
 "ShrinkExplorerAddressBar"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Zcela skrýt adresní řádek **
+;b Zcela zakázat adresní řádek **
 "HideExplorerSearchBar"=dword:00000000
 ;s Explorer_TitlebarSection !IsWindows11Version22H2OrHigher
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 4 Title bar
-;x 0 Show icon and title (default)
-;x 1 Hide title, show icon
-;x 2 Hide icon, show title
-;x 3 Hide icon and title
+;c 4 Záhlaví oken
+;x 0 Zobrazit ikonu a titulek (výchozí)
+;x 1 Skrýt titulek, zobrazit ikonu
+;x 2 Skrýt ikonu, zobrazit titulek
+;x 3 Skrýt ikonu i titulek
 "HideIconAndTitleInExplorer"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 3 Apply Mica effect on these areas
-;x 0 Let File Explorer decide (default)
-;x 1 Title bar, command bar and navigation bar
-;x 2 Nowhere
+;c 3 Použít efekt Mica v těchto místech
+;x 0 Nechat rozhodnout Průzkumníka souborů (výchozí)
+;x 1 Záhlaví, ovládací rozhraní i navigační podokno
+;x 2 Nikde
 "MicaEffectOnTitlebar"=dword:00000000
 ;g Explorer_TitlebarSection
 
@@ -248,20 +248,20 @@
 
 ;T Nabídka Start
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-;z 2 Styl nabídky Start
+;z 2 Motiv nabídky Start
 ;x 0 Windows 11 (výchozí)
 ;x 1 Windows 10
 "Start_ShowClassicMode"=dword:00000000
 ;y Více možností nabídky Start v systémovém Nastavení 🡕
 ;ms-settings:personalization-start
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-;c 2 Pozice na obrazovce
-;x 0 Na okraji
+;c 2 Umístění na obrazovce
+;x 0 Na kraji
 ;x 1 Uprostřed (výchozí)
 "TaskbarAl"=dword:00000001
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 22 Maximální počet zobrazených často používaných aplikací
-;x 0 Žádná
+;c 22 Často používané aplikace zobrazit maximálně v počtu
+;x 0 Nezobrazovat
 ;x 1 1
 ;x 2 2
 ;x 3 3
@@ -282,28 +282,28 @@
 ;x 18 18
 ;x 19 19
 ;x 20 20
-;x 99999 Neomezeno
+;x 99999 Neomezovat
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_Start_MaximumFrequentApps"=dword:00000006
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\StartPage]
-;a When using multiple displays, open Start on this monitor when invoked using
-;c 10 the keyboard
-;x 1 Primární displej (výchozí)
-;x 0 Displej kde je kurzor
-;x 2 Displej #2
-;x 3 Displej #3
-;x 4 Displej #4
-;x 5 Displej #5
-;x 6 Displej #6
-;x 7 Displej #7
-;x 8 Displej #8
-;x 9 Displej #9
+;a Pokud se používá více displejů, při vyvolání klávesnicí zobrazit Start
+;c 10 na
+;x 1 Primárním displeji (výchozí)
+;x 0 Displeji kde je kurzor
+;x 2 Displeji #2
+;x 3 Displeji #3
+;x 4 Displeji #4
+;x 5 Displeji #5
+;x 6 Displeji #6
+;x 7 Displeji #7
+;x 8 Displeji #8
+;x 9 Displeji #9
 "MonitorOverride"=dword:00000001
 ;s StartMenu_Windows11 !IsWindows10StartMenu
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Vypnout sekci "Doporučené"
+;b Skrýt sekci "Doporučené"
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_StartDocked_DisableRecommendedSection"=dword:00000000
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\StartPage]
-;b Ve výchozím stavu otevřít Start se zobrazenými Všemi aplikacemi 
+;b Po otevření Startu ihned zobrazovat Všechny aplikace
 "MakeAllAppsDefault"=dword:00000000
 ;g StartMenu_Windows11
 ;s StartMenu_Windows10 IsWindows10StartMenu
@@ -324,9 +324,9 @@
 ;c 3 Seznam aplikací
 ;x 0 Zobrazit
 ;x 3 Skrýt
-;x 1 Vypnout 
+;x 1 Zakázat 
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_NoStartMenuMorePrograms"=dword:00000000
-;u Připnout z Průzkumníka dlaždice do Windows 10 nabídky Start 
+;u Připnout z Průzkumníka souborů dlaždice do Windows 10 nabídky Start 
 ;pin_tiles
 ;g StartMenu_Windows10
 
@@ -334,31 +334,31 @@
 
 ;T Přepínač oken
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
-;z 4 Styl přepínače oken (Alt+Tab) *
+;z 4 Motiv přepínače oken (Alt+Tab) *
 ;x 0 Windows 11 (default)
 ;x 3 Windows 10
 ;x 1 Windows NT
-;x 2 Jednoduchý přepínač oken
+;x 2 Vlastní přepínač oken
 "AltTabSettings"=dword:00000000
 ;s WindowSwitcher_SWS IsSWSEnabled
 [HKEY_CURRENT_USER\Software\ExplorerPatcher\sws]
 ;b Zahrnout Plochu
 "IncludeWallpaper"=dword:00000001
-;b Vždy zobrazit na primární monitoru
+;b Vždy zobrazit na primárním monitoru
 "PrimaryOnly"=dword:00000000
-;b Zobrazit okna jen z používaného monitoru
+;b Zobrazit okna jen z právě používaného monitoru
 "PerMonitor"=dword:00000000
 ;b Display only the most recent window (per application switcher)
 "SwitcherIsPerApplication"=dword:00000000
 ;b %PLACEHOLDER_0001%
 "NoPerApplicationList"=dword:00000000
-;c 3 Téma
+;c 3 Motiv
 ;x 0 Výchozí
 ;x 1 Acrylic
 ;x 2 Mica (vždy neprůhledné)
 "Theme"=dword:00000000
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MultitaskingView\AltTabViewHost]
-;c 19 Nerůhlednost
+;c 19 Neprůhlednost
 ;x 100 Neprůhledné
 ;x 98 98 %
 ;x 96 96 %
@@ -386,7 +386,7 @@
 ;x 2 Tmavé
 "ColorScheme"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher\sws]
-;c 3 Zaoblení
+;c 3 Rohy
 ;x 2 Zaoblené (výchozí)
 ;x 3 Málo zaoblené
 ;x 1 Nezaoblené
@@ -414,7 +414,7 @@
 ;x 150 150 bodů
 ;x 140 140 bodů
 "RowHeight"=dword:000000e6
-;c 10 Maximální šířka (procento šířky obrazovky)
+;c 10 Maximální šířka (procento šířky displeje)
 ;x 100 100 % (nedoporučeno)
 ;x 95 95 %
 ;x 90 90 %
@@ -426,7 +426,7 @@
 ;x 60 60 %
 ;x 55 55 %
 "MaxWidth"=dword:00000050
-;c 10 Maximální výška (procento výšky obrazovky)
+;c 10 Maximální výška (procento výšky displeje)
 ;x 100 100 % (nedoporučeno)
 ;x 95 95 %
 ;x 90 90 %
@@ -451,7 +451,7 @@
 ;x 5 5 bodů
 ;x 0 Žádné
 "MasterPadding"=dword:00000014
-;c 11 Zpoždění zobraneí
+;c 11 Zpoždění zobrazení
 ;x 0 Žádné
 ;x 25 25 ms
 ;x 50 50 ms
@@ -464,84 +464,84 @@
 ;x 400 400 ms
 ;x 500 500 ms
 "ShowDelay"=dword:00000064
-;c 3 Použít kolečko myši pro změnu výběru
+;c 3 Povolit změnu výběru kolečkem myši 
 ;x 0 Nikdy (výchozí)
-;x 1 Když je kurzor místěný v přepínači
+;x 1 Když je kurzor umístěný v přepínači
 ;x 2 Vždy
 "ScrollWheelBehavior"=dword:00000000
 ;q
-;y Dozvědět se více o Jednoduchém přepínači oken 🡕
+;y Dozvědět se více o Vlastním přepínači oken 🡕
 ;https://github.com/valinet/ExplorerPatcher/wiki/Simple-Window-Switcher
 ;g WindowSwitcher_SWS
 
 
 
 ;s Weather_Windows10 IsOldTaskbar
-;T Weather
+;T Počasí
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Show Weather on the taskbar
+;b Zobrazit Počasí na Hlavním panelu
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_PeopleBand"=dword:00000000
 ;s Weather_Section1 IsWeatherEnabled
-;w Location
-;Search City or Zip Code; the program looks up "weather in /* what you typed */" on Google. Leave blank for the default value (current location).
-;Current location (default)
+;w Region
+;Vyhledejte město nebo poštovní směrovací číslo pomocí Googlu. Ponechejte prázdné pro výchozí hodnotu (momentální region).
+;Momentální region (výchozí)
 "WeatherLocation"=""
-;c 5 Layout
-;x 0 Icon and description (default)
-;x 3 Icon and temperature
-;x 1 Icon only
-;x 4 Temperature only
-;x 5 Temperature and description
+;c 5 Vzezření
+;x 0 Ikona a popis (výchozí)
+;x 3 Ikona a teplota
+;x 1 Pouze ikona
+;x 4 Pouze teplota
+;x 5 Teplota a popis
 "WeatherViewMode"=dword:00000000
-;c 3 Widget size
-;x 0 Automatic (fit contents) (default)
-;x 2 Automatic (fit contents) with threshold
-;x 1 Fixed
+;c 3 Velikost widgetu
+;x 0 Automatická (na míru obsahu) (výchozí)
+;x 2 Automatická (na míru obsahu) s limitem
+;x 1 Pevná
 "WeatherFixedSize"=dword:00000000
-;c 2 Widget position
-;x 0 Right / bottom (default)
-;x 1 Left / top
+;c 2 Umístění widgetu
+;x 0 Vpravo / dole (výchozí)
+;x 1 Vlevo / nahoře
 "WeatherToLeft"=dword:00000000
-;c 7 Update frequency
-;x 60 Every minute
-;x 300 Every 5 minutes
-;x 900 Every 15 minutes
-;x 1200 Every 20 minutes (default)
-;x 1800 Every half an hour
-;x 3600 Every hour
-;x 7200 Every couple of hours
+;c 7 Frekvence aktualizace
+;x 60 Každou minutu
+;x 300 Každých 5 minut
+;x 900 Každých 15 minut
+;x 1200 Každých 20 minut (výchozí)
+;x 1800 Každou půlhodinu
+;x 3600 Každou hodinu
+;x 7200 Každých pár hodin
 "WeatherContentUpdateMode"=dword:000004B0
-;c 2 Temperature unit
-;x 0 Celsius (default)
-;x 1 Fahrenheit
+;c 2 Jednotka teploty
+;x 0 Stupně Celsia (výchozí)
+;x 1 Stupně Fahrenheita
 "WeatherTemperatureUnit"=dword:00000000
-;;;c 2 Location accuracy
-;;;x 0 Generic (based on the IP address) (default)
-;;;x 1 Precise (geolocation)
+;;;c 2 Přesnost regionu
+;;;x 0 Generická (podle IP adresy) (výchozí)
+;;;x 1 Přesná (geolokace)
 ;;"WeatherLocationType"=dword:00000000
-;w Language
-;Type the short code for the language you'd like the weather data to be displayed in. For example, try "en", "ro", "de", "fr" etc. Leave blank for the default value (language of the Windows OS).
-;System language (default)
+;w Jazyk
+;Zadejte krátký kód jazyka, v němž chcete zobrazit informace o počasí. Zkuste například "en", "ro", "de" nebo "fr". Ponechejte prázdné pro výchozí hodnotu (systémový jazyk).
+;Systémový jazyk (výchozí)
 "WeatherLanguage"=""
-;c 3 Color scheme
-;x 0 Follow system setting (default)
-;x 1 Light
-;x 2 Dark
+;c 3 Barevné schéma
+;x 0 Sladit se systémovým nastavením (výchozí)
+;x 1 Světlé
+;x 2 Tmavé
 "WeatherTheme"=dword:00000000
-;c 3 Corner preference
-;x 2 Rounded (default)
-;x 3 Small rounded
-;x 1 Not rounded
+;c 3 Rohy
+;x 2 Zaoblené (výchozí)
+;x 3 Málo zaoblené
+;x 1 Nezaoblené
 "WeatherWindowCornerPreference"=dword:00000002
-;c 2 Icon pack
-;x 0 Microsoft (default)
+;c 2 Balíček ikon
+;x 0 Microsoft (výchozí)
 ;x 1 Google
 "WeatherIconPack"=dword:00000000
-;c 2 Display widget contents
-;x 0 On a single line (default)
-;x 1 On 2 lines, if possible
+;c 2 Rozložení informací
+;x 0 Na jednom řádku (výchozí)
+;x 1 Na dvou řádcích, pokud to jde
 "WeatherContentsMode"=dword:00000000
-;c 17 Zoom
+;c 17 Přiblížení
 ;x 25 25 %
 ;x 33 33 %
 ;x 50 50 %
@@ -549,7 +549,7 @@
 ;x 75 75 %
 ;x 80 80 %
 ;x 90 90 %
-;x 0 100 % (default)
+;x 0 100 % (výchozí)
 ;x 110 110 %
 ;x 125 125 %
 ;x 150 150 %
@@ -562,13 +562,13 @@
 "WeatherZoomFactor"=dword:00000000
 ;q
 ;g Weather_Section1
-;y Learn more about the Weather taskbar widget 🡕
+;y Dozvědět se více o widgetu Počasí na Hlavním panelu 🡕
 ;https://github.com/valinet/ExplorerPatcher/wiki/Weather
 ;s Weather_Section2 IsWeatherEnabled
 ;t %WEATHERLASTUPDATETEXT%
-;u Update weather now
+;u Okamžitě aktualizovat počasí
 ;update_weather
-;u Clear weather widget local data
+;u Vymazat místní data widgetu Počasí
 ;clear_data_weather
 ;g Weather_Section2
 ;g Weather_Windows10
@@ -628,25 +628,25 @@
 "LastSectionInProperties"=dword:00000000
 ;b Při stisku Win+C zobrazovat panel hodin místo Microsoft Teams  *
 "ClockFlyoutOnWinC"=dword:00000000
-;b Zobrazovat oddělovače mezi panely Hlavního panelu *
+;b Zobrazovat oddělovače mezi panely nástrojů Hlavního panelu *
 "ToolbarSeparators"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;b Add shortcut to program settings in Win+X menu
 "PropertiesInWinX"=dword:00000000
 ;b Remove shortcut key from program settings item in Win+X menu
 "NoMenuAccelerator"=dword:00000000
-;b Deaktivovat klávesové zkratky Officu (Ctrl+Alt+Shift+Windows key combinations) *
+;b Zakázat klávesové zkratky Officu (Ctrl+Alt+Shift+Windows key combinations) *
 "DisableOfficeHotkeys"=dword:00000000
-;b Deaktivovat klávesovou zkratku Win+F (Feedback Hub) *
+;b Zakázat klávesovou zkratku Win+F (Feedback Hub) *
 "DisableWinFHotkey"=dword:00000000
-;b Deaktivovat zaoblení rohů oken aplikací
+;b Zakázat zaoblení rohů oken aplikací
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_DisableRoundedCorners"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Deaktivovat kvadranty při připínání oken *
+;b Zakázat kvadranty při připínání oken *
 "DisableAeroSnapQuadrants"=dword:00000000
 ;s Other_SnapAssistStyle !IsWindows11Version22H2OrHigher
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;c 2 Styl připínání oken
+;c 2 Motiv připínání oken
 ;x 0 Windows 11 (výchozí)
 ;x 3 Windows 10
 "SnapAssistSettings"=dword:00000000
@@ -680,22 +680,22 @@
 ;x 0 Zeptat se na instalaci dostupných aktualizací
 ;x 2 Nekontrolovat aktualizace
 "UpdatePolicy"=dword:00000001
-;b Získávat nehotové verze, pokud jsou dostupné  (nedoporučeno)
+;b Získávat nehotové verze, pokud jsou dostupné (nedoporučeno)
 "UpdatePreferStaging"=dword:00000000
 ;b Navrhnout nejaktuálnější verzi na serveru, i když je starší (nedoporučeno)
 "UpdateAllowDowngrades"=dword:00000000
 ;t Aktualizační servery:
 ;w Verze
-;Type a URL that serves resources adhering to GitHub's releases API. To learn how to configure your own update server, please consult the wiki.
+;Zadejte URL zdroje odpovídající API nehotových verzí na GitHubu. Jak nakonfigurovat svůj vlastní aktualizační server, vám napoví wiki.
 ;github.com/valinet/ExplorerPatcher/releases/latest
 "UpdateURL"=""
 ;w Nehotové verze
-;Type a URL that serves resources adhering to GitHub's pre-releases API. To learn how to configure your own update server, please consult the wiki.
+;Zadejte URL zdroje odpovídající API nehotových verzí na GitHubu. Jak nakonfigurovat svůj vlastní aktualizační server, vám napoví wiki.
 ;api.github.com/repos/valinet/ExplorerPatcher/releases?per_page=1
 "UpdateURLStaging"=""
 ;y Zkontrolovat aktualizace
 ;;;EP_CHECK_FOR_UPDATES
-;y Aktualizovat a restartovat Průzkumníka souborů
+;y Aktualizovat a restartovat explorer.exe
 ;;;EP_INSTALL_UPDATES
 ;y Prohlédnout si změny v posledních verzích 🡕
 ;https://github.com/valinet/ExplorerPatcher/blob/master/CHANGELOG.md
@@ -719,7 +719,7 @@
 ;b Zobrazit na ploše informace o sestavení Windows *
 "PaintDesktopVersion"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Povolit pokročilá omezení pro správné vykreslování pomocí klasického motivu *
+;b Povolit pokročilá utišení pro správné vykreslování při nastavení klasického motivu *
 "ClassicThemeMitigations"=dword:00000000
 [-HKEY_CURRENT_USER\Software\Classes\CLSID\{1eeb5b5a-06fb-4732-96b3-975c0194eb39}\InprocServer32]
 ;d Povolit SysListView32 pro pohledy Průzkumníka *
@@ -732,7 +732,7 @@
 ;s Advanced_Windows10 IsOldTaskbar
 ;b Připnuté položky se chovají jako ikony rychlého spuštění (neseskupují se se spuštěnými aplikacemi) *
 "PinnedItemsActAsQuickLaunch"=dword:00000000
-;b Když Hlavní panel zobrazuje popisky, odstranit přidaný okraj v okolí připnutých položek *
+;b Když Hlavní panel zobrazuje popisky, odstranit mezeru kolem připnutých položek *
 "RemoveExtraGapAroundPinnedItems"=dword:00000000
 ;g Advanced_Windows10
 ;c 12 Dodatečné zpoždění při přihlášení *
