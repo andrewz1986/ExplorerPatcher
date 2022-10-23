@@ -703,89 +703,89 @@
 ;https://github.com/valinet/ExplorerPatcher/wiki/Configure-updates
 
 
-;T Advanced
-;e Only change these settings after reading the documentation about them.
-;y Learn more 🡕
+;T Pokročilé
+;e Tato nastavení měňte, až se seznámíte s dokumentací.
+;y Dozvědět se více 🡕
 ;https://github.com/valinet/ExplorerPatcher/wiki/About-advanced-settings
 ;q
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Enable console
+;b Povolit konzoli
 "AllocConsole"=dword:00000000
-;b Dump memory leaks
+;b Potlačit paměťové úniky
 "Memcheck"=dword:00000000
-;b Double click taskbar to toggle auto-hide (only works when the taskbar is locked) 
+;b Dvojklikem na Hlavní panel přepínat režim automatického skrývání (funguje jen při zamknutém Hlavním panelu) 
 "TaskbarAutohideOnDoubleClick"=dword:00000000
 [HKEY_CURRENT_USER\Control Panel\Desktop]
-;b Show Windows build info on the desktop *
+;b Zobrazit na ploše informace o sestavení Windows *
 "PaintDesktopVersion"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Enable advanced mitigations for correct rendering using classic theme *
+;b Povolit pokročilá omezení pro správné vykreslování pomocí klasického motivu *
 "ClassicThemeMitigations"=dword:00000000
 [-HKEY_CURRENT_USER\Software\Classes\CLSID\{1eeb5b5a-06fb-4732-96b3-975c0194eb39}\InprocServer32]
-;d Enable SysListView32 for Explorer views *
+;d Povolit SysListView32 pro pohledy Průzkumníka *
 @=""
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;b Hide the program settings item ("Properties") from the taskbar context menu
+;b Skrýt položku pro nastavení ("Vlastnosti") v kontextovém menu hlavního panelu
 "NoPropertiesInContextMenu"=dword:00000000
-;b Enable symbols download *
+;b Povolit stažení symbolů *
 "EnableSymbolDownload"=dword:00000001
 ;s Advanced_Windows10 IsOldTaskbar
-;b Pinned items act as quick launch (don't group pinned items with active apps) *
+;b Připnuté položky se chovají jako ikony rychlého spuštění (neseskupují se se spuštěnými aplikacemi) *
 "PinnedItemsActAsQuickLaunch"=dword:00000000
-;b When the taskbar shows button labels, remove the extra gap around pinned items *
+;b Když Hlavní panel zobrazuje popisky, odstranit přidaný okraj v okolí připnutých položek *
 "RemoveExtraGapAroundPinnedItems"=dword:00000000
 ;g Advanced_Windows10
-;c 12 Supplementary delay at logon *
-;x 0 None (default)
+;c 12 Dodatečné zpoždění při přihlášení *
+;x 0 Žádné (výchozí)
 ;x 300 300 ms
 ;x 600 600 ms
-;x 1000 1 second
-;x 1500 1.5 seconds
-;x 2000 2 seconds
-;x 3000 3 seconds
-;x 4000 4 seconds
-;x 5000 5 seconds
-;x 6000 6 seconds
-;x 8000 8 seconds
-;x 10000 10 seconds
+;x 1000 1 sekunda
+;x 1500 1,5 sekundy
+;x 2000 2 sekundy
+;x 3000 3 sekundy
+;x 4000 4 sekundy
+;x 5000 5 sekund
+;x 6000 6 sekund
+;x 8000 8 sekund
+;x 10000 10 sekund
 "ExplorerReadyDelay"=dword:00000000
 
 
 
-;T About
+;T O projektu
 ;e ExplorerPatcher
-;e Version %VERSIONINFORMATIONSTRING%
-;t © 2006-2022 VALINET Solutions SRL. All rights reserved.
+;e Verze %VERSIONINFORMATIONSTRING%
+;t © 2006-2022 VALINET Solutions SRL. Všechna práva vyhrazena.
 ;e 
-;e This project aims to enhance the working environment on Windows.
-;e Proudly engineered by Valentin-Gabriel Radu.
-;t Running on Windows 11, OS Build %OSVERSIONSTRING%
-;y Visit project GitHub (https://github.com/valinet) 🡕
+;e Tento projekt má za cíl zlepšit pracovní prostředí Windows.
+;e Pyšně vyvinul Valentin-Gabriel Radu.
+;t Právě běží na Windows 11, sestavení systému %OSVERSIONSTRING%
+;y Navštivte projekt na GitHubu (https://github.com/valinet) 🡕
 ;https://github.com/valinet
 ;q
-;y Visit web site (https://www.valinet.ro) 🡕
+;y Navštivte webovou stránku (https://www.valinet.ro) 🡕
 ;https://www.valinet.ro
-;y E-mail author (valentingabrielradu@gmail.com) 🡕
+;y Zašlete e-mail autorovi (valentingabrielradu@gmail.com) 🡕
 ;mailto:valentingabrielradu@gmail.com
-;y Donate (using PayPal) 🡕
+;y Přispějte (pomocí PayPalu) 🡕
 ;https://www.paypal.com/donate?business=valentingabrielradu%40gmail.com&no_recurring=0&item_name=ExplorerPatcher&currency_code=EUR
-;y Frequently Asked Questions 🡕
+;y Často kladené otázky 🡕
 ;https://github.com/valinet/ExplorerPatcher/wiki/Frequently-asked-questions
-;y Learn more managing these settings 🡕
+;y Dozvědět se více o správě těchto nastavení 🡕
 ;https://github.com/valinet/ExplorerPatcher/wiki/Settings-management
-;u Import settings
+;u Importovat nastavení
 ;import
-;u Export current settings
+;u Exportovat nastavení
 ;export
-;u Restore default settings
+;u Obnovit výchozí nastavení
 ;reset
 
 
 
 ;f
-;u Restart File Explorer (*)
+;u Restartovat explorer.exe (*)
 ;restart
-;;u Restore default settings
+;;u Obnovit výchozí nastavení
 ;;reset
-;;u About ExplorerPatcher
+;;u O projektu ExplorerPatcher
 ;;about
